@@ -4,7 +4,7 @@
   "description": "Simple Weather API by Nichollas Marvila.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "author": "Nichollas Marvila",
   "license": "ISC",
