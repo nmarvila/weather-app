@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "Simple Weather App by Nichollas Marvila.",
+  "description": "Simple Weather API by Nichollas Marvila.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
