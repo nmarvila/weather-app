@@ -12,7 +12,7 @@ test('tests /weather endpoint to obtain weather information from a location\'s n
 
 
 test('tests /weather endpoint to obtain weather information from a zip code', async() => {
-    const response = await request(url).get('/weather?zipcode="20031900"')
+    const response = await request(url).get('/weather?zipcode="22031000"')
     const responseValue = JSON.parse(response.text)
     expect(response).not.toEqual(undefined)
     expect(response.statusCode).toEqual(200)
