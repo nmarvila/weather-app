@@ -1,5 +1,7 @@
 const axios = require('axios')
 const GeoService = require('./GeoService')
+const Weather = require('../Models/Weather')
+
 const geoService = new GeoService()
 
 class WeatherService {
@@ -12,10 +14,10 @@ class WeatherService {
         } else if (req.query.zipcode != undefined) {
             geoPoint = await geoService.getGeoInfo(req.query.zipcode, 'zipcode')
         }
-        
+
         url += `latitude=${geoPoint.lat}&longitude=${geoPoint.lon}&current_weather=true`
         const result = await axios.get(url)
-        return result.data.current_weather
+        return new Weather(result.data.current_weather)
     }
 }
 
