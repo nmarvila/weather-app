@@ -9,3 +9,13 @@ test('tests /weather endpoint to obtain weather information from a location\'s n
     expect(responseValue).not.toEqual(undefined)
     expect(responseValue.temperature).not.toEqual(undefined)
 }, 10000)
+
+
+test('tests /weather endpoint to obtain weather information from a zip code', async() => {
+    const response = await request(url).get('/weather?zipcode="20031900"')
+    const responseValue = JSON.parse(response.text)
+    expect(response).not.toEqual(undefined)
+    expect(response.statusCode).toEqual(200)
+    expect(responseValue).not.toEqual(undefined)
+    expect(responseValue.temperature).not.toEqual(undefined)
+}, 10000)
